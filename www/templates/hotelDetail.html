@@ -1,0 +1,44 @@
+<ion-view title="Order Place.">
+
+  <ion-content>
+
+<!--<div ng-repeat="rest in restDetail" ng-show="rest.name == restInfo">-->
+<!--{{rest.Menu}}-->
+  <!--<div ng-repeat="restM in rest.Menu">-->
+    <!--{{restM}}-->
+  <!--</div>-->
+<!--</div>-->
+   <!--{{restInfo}}-->
+    <!---->
+
+    <div class="list" ng-repeat="rest in restDetail" ng-show="rest.name==restInfo">
+      {{restInfo}}
+      <div class="item item-button-right">
+        Broast: {{rest.Menu.Item1.Name}}
+        Price: {{rest.Menu.Item1.Price}}
+        <button class="button button-positive" ng-click="orders(rest.Menu.Item1)">
+          <i>Order</i>
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Chicken: {{rest.Menu.Item2.Name}}
+        Price: {{rest.Menu.Item1.Price}}
+        <button class="button button-positive" ng-click="orders(rest.Menu.Item2)">
+          <i>Order</i>
+        </button>
+      </div>
+      <div class="item item-button-right">
+        Roti: {{rest.Menu.Item3.Name}}
+        Price: {{rest.Menu.Item1.Price}}
+        <button class="button button-positive" ng-click="orders(rest.Menu.Item3)">
+          <i>Order</i>
+        </button>
+      </div>
+    </div>
+
+    <button class="button button-full button-calm" ng-click="OrderPlacementState()">
+     Add to Cart
+    </button>
+
+  </ion-content>
+</ion-view>

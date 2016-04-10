@@ -1,0 +1,24 @@
+<ion-view title="Order Place.">
+
+  <ion-content>
+
+<h2>Welcome to : {{user}}</h2>
+    <h2>Hotels List..</h2>
+
+    <div class="list" ng-repeat="res in restaurants">
+
+      <a class="item item-avatar" href="#" ng-click="resDetail(res.name)">
+        <img src="../img/ionic.png">
+        <h2>Hotel Name: {{res.name}}</h2>
+        <p>Address: {{res.address}}</p>
+        <p>Delivery Fee: {{res.deliveryfee}}</p>
+      </a>
+    </div>
+
+
+
+
+    <ion-nav-view name="hotelDetail"></ion-nav-view>
+
+  </ion-content>
+</ion-view>
